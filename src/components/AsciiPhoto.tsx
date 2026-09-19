@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { withBase } from '../utils/basePath';
 
 interface AsciiPhotoProps {
   src?: string;
@@ -26,7 +27,7 @@ export function AsciiPhoto({
     let isLoaded = false;
     const img = new Image();
     img.crossOrigin = 'anonymous';
-    img.src = src;
+    img.src = withBase(src);
 
     // Spec parameters:
     const cellSize = 9;
@@ -155,7 +156,7 @@ export function AsciiPhoto({
 
         if (containerAspect > imgAspect) {
           drawH = w / imgAspect;
-          offsetY = (h - drawH) / 2;
+          offsetY = (h - drawH) * 0.15;
         } else {
           drawW = h * imgAspect;
           offsetX = (w - drawW) / 2;

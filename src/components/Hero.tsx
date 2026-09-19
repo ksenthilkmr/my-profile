@@ -6,6 +6,7 @@ import {
   useTransform } from
 'framer-motion';
 import { profile } from '../data/resume';
+import { withBase } from '../utils/basePath';
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
@@ -61,7 +62,7 @@ export function Hero() {
             
             <div className="pointer-events-auto relative w-[65px] h-[110px] sm:w-[90px] sm:h-[152px] md:w-[110px] md:h-[185px] lg:w-[129px] lg:h-[218px] rounded-full overflow-hidden bg-black shadow-2xl ring-4 ring-paper transition-transform duration-300 hover:scale-110 cursor-pointer">
               <img
-                src={profile.portrait}
+                src={withBase(profile.portrait)}
                 alt={`${profile.name}, Senior Java and Spring Boot Engineer`}
                 className="h-full w-full object-cover object-[50%_15%]"
               />

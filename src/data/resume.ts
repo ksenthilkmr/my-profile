@@ -1,3 +1,5 @@
+import { withBase } from '../utils/basePath';
+
 export const profile = {
   name: 'Senthil Kumar K',
   title: 'Senior Java / Spring Boot Engineer',
@@ -5,11 +7,11 @@ export const profile = {
   email: 'ksenthilkmr@gmail.com',
   phone: '+91 97385 63410',
   phoneHref: '+919738563410',
-  resumeUrl: "/Senthil_Kumar_Resume.pdf",
+  resumeUrl: withBase("/Senthil_Kumar_Resume.pdf"),
 
-  portrait: "/senthil-portrait.jpg",
+  portrait: withBase("/senthil-portrait.jpg"),
 
-  editorial: "/dc92f432-3bb8-4f83-aba1-c6bee94027ee.jpg",
+  editorial: withBase("/dc92f432-3bb8-4f83-aba1-c6bee94027ee.jpg"),
 
   lede: 'Fourteen years designing and running the backend systems behind checkout, identity and fulfilment for retailers and telecoms — built on Java, Spring Boot and Kafka.'
 };

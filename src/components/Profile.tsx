@@ -2,6 +2,7 @@ import React from 'react';
 import { facts, profile, summary } from '../data/resume';
 import { Eyebrow, Reveal } from './Reveal';
 import { AsciiPhoto } from './AsciiPhoto';
+import { withBase } from '../utils/basePath';
 
 export function Profile() {
   return (
@@ -17,9 +18,13 @@ export function Profile() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-12">
+        <div className="mt-16 grid gap-6 lg:grid-cols-12 items-stretch">
           <Reveal delay={0.05} className="h-full lg:col-span-5">
-            <AsciiPhoto src="/a.jpg" alt="Senthil Kumar K - ASCII Dither Portrait" />
+            <AsciiPhoto
+              src={withBase(profile.portrait || '/a.jpg')}
+              alt="Senthil Kumar K - ASCII Dither Portrait"
+              className="h-full min-h-[28rem] lg:min-h-full"
+            />
           </Reveal>
 
           <Reveal delay={0.1} className="h-full lg:col-span-7">
