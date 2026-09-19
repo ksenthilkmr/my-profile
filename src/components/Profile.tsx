@@ -21,7 +21,7 @@ export function Profile() {
         <div className="mt-16 grid gap-6 lg:grid-cols-12 items-stretch">
           <Reveal delay={0.05} className="h-full lg:col-span-5">
             <AsciiPhoto
-              src={withBase(profile.portrait || '/a.jpg')}
+              src={profile.portrait}
               alt="Senthil Kumar K - ASCII Dither Portrait"
               className="h-full min-h-[28rem] lg:min-h-full"
             />

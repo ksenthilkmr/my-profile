@@ -1,4 +1,6 @@
 import { withBase } from '../utils/basePath';
+import portraitImg from '../assets/senthil-portrait.jpg';
+import editorialImg from '../assets/dc92f432-3bb8-4f83-aba1-c6bee94027ee.jpg';
 
 export const profile = {
   name: 'Senthil Kumar K',
@@ -7,11 +9,11 @@ export const profile = {
   email: 'ksenthilkmr@gmail.com',
   phone: '+91 97385 63410',
   phoneHref: '+919738563410',
-  resumeUrl: withBase("/Senthil_Kumar_Resume.pdf"),
+  resumeUrl: withBase('/Senthil_Kumar_Resume.pdf'),
 
-  portrait: withBase("/senthil-portrait.jpg"),
+  portrait: portraitImg,
 
-  editorial: withBase("/dc92f432-3bb8-4f83-aba1-c6bee94027ee.jpg"),
+  editorial: editorialImg,
 
   lede: 'Fourteen years designing and running the backend systems behind checkout, identity and fulfilment for retailers and telecoms — built on Java, Spring Boot and Kafka.'
 };
