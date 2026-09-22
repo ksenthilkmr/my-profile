@@ -1,6 +1,7 @@
 import { withBase } from '../utils/basePath';
 import portraitImg from '../assets/senthil-portrait.jpg';
 import editorialImg from '../assets/dc92f432-3bb8-4f83-aba1-c6bee94027ee.jpg';
+import asciiPortraitImg from '../assets/ascii-portrait.jpg';
 
 export const profile = {
   name: 'Senthil Kumar K',
@@ -12,6 +13,7 @@ export const profile = {
   resumeUrl: withBase('/Senthil_Kumar_Resume.pdf'),
 
   portrait: portraitImg,
+  asciiPortrait: asciiPortraitImg,
 
   editorial: editorialImg,
 

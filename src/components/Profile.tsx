@@ -1,8 +1,6 @@
 import React from 'react';
 import { facts, profile, summary } from '../data/resume';
 import { Eyebrow, Reveal } from './Reveal';
-import { AsciiPhoto } from './AsciiPhoto';
-import { withBase } from '../utils/basePath';
 
 export function Profile() {
   return (
@@ -20,11 +18,14 @@ export function Profile() {
 
         <div className="mt-16 grid gap-6 lg:grid-cols-12 items-stretch">
           <Reveal delay={0.05} className="h-full lg:col-span-5">
-            <AsciiPhoto
-              src={profile.portrait}
-              alt="Senthil Kumar K - ASCII Dither Portrait"
-              className="h-full min-h-[28rem] lg:min-h-full"
-            />
+            <div className="group relative flex h-full min-h-[28rem] w-full overflow-hidden rounded-panel bg-[#030712] shadow-xl ring-1 ring-ink/10 transition-all duration-300 hover:shadow-2xl">
+              <img
+                src={profile.asciiPortrait}
+                alt="Senthil Kumar K - ASCII Portrait"
+                className="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+              />
+              <div className="pointer-events-none absolute inset-0 rounded-panel ring-1 ring-inset ring-white/10" />
+            </div>
           </Reveal>
 
           <Reveal delay={0.1} className="h-full lg:col-span-7">

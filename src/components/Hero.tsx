@@ -3,8 +3,9 @@ import {
   motion,
   useReducedMotion,
   useScroll,
-  useTransform } from
-'framer-motion';
+  useTransform
+} from
+  'framer-motion';
 import { profile } from '../data/resume';
 import { withBase } from '../utils/basePath';
 
@@ -25,9 +26,9 @@ export function Hero() {
       id="top"
       ref={ref}
       className="relative overflow-hidden bg-paper pt-24 sm:pt-28 pb-16 sm:pb-24 scroll-mt-24">
-      
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        
+
         {/* Top Calligraphy Monogram Symbol matching image.png top monogram "A" -> "S" */}
         <motion.div
           initial={reduceMotion ? undefined : { opacity: 0, y: -10 }}
@@ -35,13 +36,13 @@ export function Hero() {
           transition={{ duration: 0.4, ease: EASE }}
           className="mb-2 flex justify-center">
           <span className="font-serif italic text-4xl sm:text-5xl font-medium tracking-wide text-ink select-none">
-            S
+            K
           </span>
         </motion.div>
 
         {/* Hero Central Block with Positionally Centered Pill Portrait & Giant Lime Text */}
         <div className="relative mx-auto flex flex-col items-center justify-center my-4 sm:my-6">
-          
+
           {/* Giant Lime Accent Typography matching image.png */}
           <motion.div
             initial={reduceMotion ? undefined : { opacity: 0, scale: 0.96 }}
@@ -59,7 +60,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1, ease: EASE }}
             style={reduceMotion ? undefined : { scale: imageScale, opacity: imageOpacity }}
             className="absolute inset-0 z-10 m-auto flex items-center justify-center pointer-events-none">
-            
+
             <div className="pointer-events-auto relative w-[65px] h-[110px] sm:w-[90px] sm:h-[152px] md:w-[110px] md:h-[185px] lg:w-[129px] lg:h-[218px] rounded-full overflow-hidden bg-black shadow-2xl ring-4 ring-paper transition-transform duration-300 hover:scale-110 cursor-pointer">
               <img
                 src={withBase(profile.portrait)}
@@ -102,7 +103,7 @@ export function Hero() {
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.3, ease: EASE }}
           className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          
+
           <a
             href="#contact"
             className="inline-flex items-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-paper transition-colors duration-150 ease-lux hover:bg-ink-800">
